@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Bubble-Picker
 
 [![License](http://img.shields.io/badge/license-MIT-green.svg?style=flat)]()
@@ -219,3 +220,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+=======
+# bubble-picker-lib
+Bubble picker animated library
+>>>>>>> 22932f717081d7741cd004463b93e495ac7f71e2
