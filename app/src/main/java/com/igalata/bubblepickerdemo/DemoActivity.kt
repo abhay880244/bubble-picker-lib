@@ -22,7 +22,7 @@ class DemoActivity : AppCompatActivity() {
     private val regularTypeface by lazy { Typeface.createFromAsset(assets, ROBOTO_REGULAR) }
 
     companion object {
-        private const val ROBOTO_BOLD = "roboto_bold.ttf"
+        private const val ROBOTO_BOLD =  "roboto_bold.ttf"
         private const val ROBOTO_MEDIUM = "roboto_medium.ttf"
         private const val ROBOTO_REGULAR = "roboto_regular.ttf"
     }
