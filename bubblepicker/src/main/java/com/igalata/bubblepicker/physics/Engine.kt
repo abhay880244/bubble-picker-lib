@@ -27,7 +27,7 @@ object Engine {
     private var bubbleRadius = 0.17f
 
     private val world = World(Vec2(0f, 0f), false)
-    private val step = 0.0005f
+    val step = 0.0010f
     private val bodies: ArrayList<CircleBody> = ArrayList()
     private var borders: ArrayList<Border> = ArrayList()
     private val resizeStep = 0.005f
@@ -83,8 +83,8 @@ object Engine {
     }
 
     fun clear() {
-        borders.forEach { world.destroyBody(it.itemBody) }
-        bodies.forEach { world.destroyBody(it.physicalBody) }
+        borders.forEach { if(world.isLocked) world.destroyBody(it.itemBody) }
+        bodies.forEach { if(world.isLocked)world.destroyBody(it.physicalBody) }
         borders.clear()
         bodies.clear()
     }
@@ -114,7 +114,7 @@ object Engine {
             val direction = gravityCenter.sub(position)
             val distance = direction.length()
             val gravity = if (body.increased) 1.3f * currentGravity else currentGravity
-            if (distance > step * 200) {
+            if (distance > step * 150) {
                 applyForce(direction.mul(gravity / distance.sqr()), position)
             }
         }
